@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -144,11 +144,19 @@
     }
     @media (max-width: 768px) {
       .nunchi-concept { grid-template-columns: 1fr; }
+      .nunchi-concept__item { padding: 1.75rem 1.5rem; }
       .nunchi-flow { grid-template-columns: 1fr; }
+      .nunchi-flow__step { padding: 1.5rem 1.25rem; }
       .nunchi-flow__arrow { display: none; }
       .nunchi-cats { grid-template-columns: 1fr 1fr; }
+      .nunchi-cat { padding: 1.5rem 1.25rem; }
       .nunchi-palette { flex-wrap: wrap; }
       .nunchi-palette .nunchi-swatch { flex: 0 0 calc(50% - 1px); }
+      .nunchi-stats { grid-template-columns: 1fr 1fr; }
+      .nunchi-stat { padding: 1.5rem 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      .nunchi-cats { grid-template-columns: 1fr; }
       .nunchi-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -157,7 +165,6 @@
   <div class="glow" aria-hidden="true"></div>
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">
-      <img src="profile-photo.jpg" alt="장훈민" class="nav__avatar" />
       Jang Hoon Min
     </a>
     <ul class="nav__links">

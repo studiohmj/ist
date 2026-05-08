@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -376,6 +376,7 @@
     @media (max-width: 768px) {
       :root { --vg-pad: 24px; --vg-sec: 56px; --vg-blk: 32px; }
       .vg-aside, .vg-main { grid-column: 1 / -1; }
+      .vg-hero { padding-top: calc(var(--nav-h, 64px) + 2.5rem); }
       .vg-hero__title { font-size: clamp(52px, 15vw, 84px); }
       .vg-meta { grid-template-columns: 1fr 1fr; }
       .vg-meta__item:nth-child(3) { border-left: none; padding-left: 0; }
@@ -401,7 +402,6 @@
 
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">
-      <img src="profile-photo.jpg" alt="장훈민" class="nav__avatar" />
       Jang Hoon Min
     </a>
     <ul class="nav__links">

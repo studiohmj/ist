@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -219,6 +219,7 @@
     }
     @media (max-width: 768px) {
       :root { --es-pad: 24px; --es-sec: 56px; --es-blk: 32px; }
+      .es-hero { padding-top: calc(var(--nav-h, 64px) + 2.5rem); }
       .es-hero__title { font-size: clamp(44px, 14vw, 72px); }
       .es-meta { grid-template-columns: 1fr 1fr; }
       .es-meta__item:nth-child(3) { border-left: none; padding-left: 0; }
@@ -246,7 +247,6 @@
 
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">
-      <img src="profile-photo.jpg" alt="장훈민" class="nav__avatar" />
       Jang Hoon Min
     </a>
     <ul class="nav__links">
