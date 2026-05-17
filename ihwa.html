@@ -13,7 +13,7 @@
     body {
       font-family: 'Pretendard Variable', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    em { font-family: inherit; font-style: normal; }
+    em { font-family: inherit; font-style: normal; color: inherit; }
 
     :root {
       --iw: #1A6BFF;
@@ -41,7 +41,7 @@
     .iw-hero__year { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: var(--t3); }
     .iw-hero__title {
       font-size: clamp(52px, 8vw, 96px); font-weight: 900; letter-spacing: -0.04em;
-      line-height: 0.95; color: var(--primary); margin-bottom: 8px;
+      line-height: 0.95; color: var(--iw); margin-bottom: 8px;
     }
     .iw-hero__title span { display: inline; }
     .iw-hero__title .iw-accent { color: inherit; }
@@ -50,9 +50,18 @@
       line-height: 1.6; margin: 28px 0 48px; max-width: 600px;
     }
     .iw-hero__dl {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 24px 32px;
-      padding-top: 40px; border-top: 1px solid var(--border);
+      display: flex;
+      gap: 0;
+      border-top: 1px solid var(--border);
     }
+    .iw-hero__dl > div {
+      padding: 1.25rem 2.5rem 1.25rem 0;
+      margin-right: 2.5rem;
+      border-right: 1px solid var(--border);
+      border-top: 3px solid transparent;
+    }
+    .iw-hero__dl > div:first-child { border-top-color: var(--iw); }
+    .iw-hero__dl > div:last-child { border-right: none; margin-right: 0; padding-right: 0; }
     .iw-hero__dl dt {
       font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--t3); margin-bottom: 6px;
@@ -69,7 +78,7 @@
     .iw-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ── Section wrapper ── */
-    .iw-section { padding: 96px 0; border-bottom: 1px solid var(--border); }
+    .iw-section { padding: 96px 0; border-top: 1px solid var(--border); }
     .iw-section--alt { background: color-mix(in srgb, var(--iw) 3%, var(--bg)); }
     .iw-section__num {
       font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
@@ -86,6 +95,9 @@
     .iw-split__num {
       font-size: 64px; font-weight: 900; letter-spacing: -0.04em; line-height: 1;
       color: color-mix(in srgb, var(--iw) 15%, transparent); margin-bottom: 12px;
+    }
+    html.dark-mode .iw-split__num {
+      color: color-mix(in srgb, var(--iw) 40%, transparent);
     }
     .iw-split__title {
       font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--t2);
@@ -293,7 +305,7 @@
   <section class="iw-hero">
     <div class="container">
       <div class="iw-hero__inner">
-        <a href="index.html#work" class="iw-hero__back">← All Work</a>
+        <a href="edustay.html" class="iw-hero__back">← Edustay</a>
         <div class="iw-hero__kicker fade-in">
           <span class="iw-hero__cat">Web Design · Freelance</span>
           <span class="iw-hero__year">2026</span>
@@ -316,7 +328,7 @@
 
   <!-- Cover image -->
   <div class="iw-cover fade-in">
-    <img src="메인 이미지/10. 이화공부방/이화공부방.png" alt="이화공부방 랜딩 페이지" />
+    <img src="메인 이미지/10. 이화공부방/이화공부방.webp" alt="이화공부방 랜딩 페이지" />
   </div>
 
   <!-- 01 Background -->
@@ -331,7 +343,7 @@
         <div>
           <p class="iw-lead">30년의 경험이 온라인에는 없었다.</p>
           <p class="iw-body">이화공부방은 경기도 의정부에서 30년 넘게 운영된 소수 정예 초등 학습 공간이다. 원장의 섬세한 지도 방식과 높은 재원율로 입소문을 타왔지만, 디지털 창구가 전혀 없었다. 학부모는 지인 소개 없이는 이 공간에 접근할 방법이 없었고, 공부방은 신규 원생 유입 경로 자체를 확보하지 못하고 있었다.</p>
-          <p class="iw-body">단순히 홈페이지가 없는 게 아니었다. 30년의 신뢰가 온라인에서 전달되지 못하고 있었다.</p>
+          <p class="iw-body">홈페이지 부재가 문제가 아니었다. 30년의 신뢰가 온라인에서 전달되지 못하고 있었다.</p>
 
           <div class="iw-insight fade-in">
             <div class="iw-insight__label">Core Insight</div>
@@ -458,7 +470,7 @@
         </div>
       </div>
 
-      <span class="iw-section__label fade-in" style="margin-top:64px; margin-bottom:16px;">Brand Philosophy</span>
+      <span class="iw-section__label fade-in" style="margin-top:64px;">Brand Philosophy</span>
       <p class="iw-body fade-in">원장의 교육 철학을 세 문장으로 정리했다. 단순한 슬로건이 아닌, 이화공부방이 아이를 대하는 방식 그 자체다.</p>
       <div class="iw-philosophy fade-in">
         <div class="iw-phi">
@@ -525,7 +537,7 @@
         <div class="iw-outcome__item">
           <span class="iw-outcome__label">Credibility</span>
           <p class="iw-outcome__title">신뢰 자산의 시각화</p>
-          <p class="iw-outcome__body">30년 경력과 재원율 90%라는 숫자, 원장의 교육 철학 카피가 처음 방문한 학부모에게도 즉각적인 신뢰감을 전달하도록 설계됐다.</p>
+          <p class="iw-outcome__body">30년 경력과 재원율 90%, 원장의 교육 철학 카피로 첫 방문 학부모에게 신뢰의 근거를 제공한다.</p>
         </div>
       </div>
     </div>
@@ -537,7 +549,7 @@
       <div class="iw-reflection__inner fade-in">
         <span class="iw-reflection__label">Reflection</span>
         <p class="iw-reflection__quote">"정보를 전달하는 게 아니라<br>신뢰를 설계하는 일이었다."</p>
-        <p class="iw-reflection__body">이 프로젝트는 기능보다 맥락이 중요한 작업이었다. 어떤 레이아웃을 쓸지, 어떤 색을 쓸지보다 — 학부모가 페이지를 처음 봤을 때 어떤 감정을 느껴야 하는지가 모든 결정의 출발점이었다. 30년이라는 시간이 1장의 화면에서 전달될 수 있다면, 그게 디자인이 할 수 있는 일의 전부라는 걸 이 프로젝트에서 다시 확인했다.</p>
+        <p class="iw-reflection__body">레이아웃과 컬러보다 먼저 결정한 것은 학부모가 페이지를 처음 봤을 때 어떤 감정을 느껴야 하는가였다. 기능보다 맥락이 앞서는 설계. 30년이라는 시간이 화면 한 장에서 전달되는 것 — 그것이 이 프로젝트의 목표였다.</p>
       </div>
     </div>
   </section>

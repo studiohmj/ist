@@ -7,7 +7,6 @@
   <title>Yellow House — Jang Hoon Min</title>
   <meta name="description" content="Yellow House — 예술이 일상에 스며드는 카페 브랜드 아이덴티티 케이스 스터디" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project.css" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 
@@ -20,7 +19,7 @@
     body {
       font-family: 'Pretendard Variable', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    em { font-family: inherit; font-style: normal; }
+    em { font-family: inherit; font-style: normal; color: inherit; }
 
     :root {
       --yh:      #FFF100;
@@ -48,6 +47,7 @@
       --yh-bdr: rgba(255, 255, 255, 0.1);
       --yh-off: #0C1527;
     }
+    html.dark-mode .yh-sec { background: var(--yh-off); }
     html.dark-mode .yh-imgblk__bar { background: var(--yh-off); }
     html.dark-mode .yh-out__h { color: var(--yh-t1); }
     html.dark-mode .yh-out__bar { background: rgba(255,255,255,0.25); }
@@ -72,6 +72,7 @@
       padding-top: var(--yh-sec);
       padding-bottom: var(--yh-sec);
       border-top: 1px solid var(--yh-bdr);
+      background: #fff;
     }
     .yh-sec--off { background: var(--yh-off); }
 
@@ -85,13 +86,13 @@
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--yh-dark);
+      color: var(--yh-t1);
       margin-bottom: var(--yh-blk);
     }
     .yh-lbl__bar {
       width: 20px;
       height: 1px;
-      background: var(--yh-dark);
+      background: var(--yh-t1);
       flex-shrink: 0;
     }
     .yh-lbl--accent {
@@ -182,10 +183,10 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--yh-dark);
+      color: var(--yh-t1);
       margin-bottom: 32px;
     }
-    .yh-hero__eyebrow-rule { width: 18px; height: 1px; background: var(--yh-dark); }
+    .yh-hero__eyebrow-rule { width: 18px; height: 1px; background: var(--yh-t1); }
     .yh-hero__eyebrow-yr   { color: var(--yh-t3); }
 
     .yh-hero__title {
@@ -763,7 +764,7 @@
 
   <!-- Cover -->
   <div class="yh-cover fade-in">
-    <img src="메인 이미지/5. yellow house/yellow house (1).jpg"
+    <img src="메인 이미지/5. yellow house/yellow house (1).webp"
          alt="Yellow House — 브랜드 커버" />
   </div>
 
@@ -782,7 +783,7 @@
             <span>Background</span>
           </div>
           <div style="border-top: 2px solid var(--yh-dark); padding-top: 20px; margin-top: 0;">
-            <span style="display:block;font-family:var(--yh-font);font-size:52px;font-weight:800;letter-spacing:-0.055em;line-height:1;color:var(--yh-dark);margin-bottom:12px;">첫<br />전시</span>
+            <span style="display:block;font-family:var(--yh-font);font-size:52px;font-weight:800;letter-spacing:-0.055em;line-height:1;color:var(--yh);margin-bottom:12px;">첫<br />전시</span>
             <p class="yh-cap">신진 예술가 대부분에게<br />첫 전시는 넘기 어려운 벽이다.<br />대관료, 관객, 판로 — 세 개의 장벽.</p>
           </div>
         </div>
@@ -849,9 +850,9 @@
             설명 없이 전달해야 한다.
           </p>
           <p class="yh-body mt-el">
-            세 모티브 — 눈, 집, 씨앗 — 은 각각 독립된 기호가 아니다.
+            세 모티브 — 집, 창문, 붓 — 은 각각 독립된 기호가 아니다.
             이것들이 하나로 합쳐질 때 Yellow House의 정체성이 완성된다.
-            시선으로 작품을 받아들이고(눈), 공간이 예술가를 품으며(집), 다음 작업으로 나아간다(씨앗).
+            공간이 예술가를 품으며(집), 시선으로 작품을 받아들이고(창문), 다음 작업으로 나아간다(붓).
             <strong>공간이 할 수 있는 일의 전부가 이 세 단어 안에 있다.</strong>
           </p>
         </div>
@@ -859,18 +860,6 @@
       </div>
 
       <div class="yh-motifs mt-blk fade-in">
-
-        <div class="yh-motif">
-          <div class="yh-motif__icon">◉</div>
-          <div class="yh-motif__name">눈</div>
-          <div class="yh-motif__val">Sense / 감각</div>
-          <p class="yh-motif__body">
-            예술을 처음 마주치는 순간, 보는 방식이 달라진다.
-            사전 지식 없이도, 선입견 없이도
-            작품이 먼저 시선 안으로 들어온다.
-            그 첫 시선이 전부다.
-          </p>
-        </div>
 
         <div class="yh-motif">
           <div class="yh-motif__icon">⌂</div>
@@ -885,9 +874,21 @@
         </div>
 
         <div class="yh-motif">
-          <div class="yh-motif__icon">❧</div>
-          <div class="yh-motif__name">씨앗</div>
-          <div class="yh-motif__val">Growth / 성장</div>
+          <div class="yh-motif__icon">▢</div>
+          <div class="yh-motif__name">창문</div>
+          <div class="yh-motif__val">View / 시선</div>
+          <p class="yh-motif__body">
+            예술을 처음 마주치는 순간, 보는 방식이 달라진다.
+            사전 지식 없이도, 선입견 없이도
+            작품이 먼저 시선 안으로 들어온다.
+            그 첫 시선이 전부다.
+          </p>
+        </div>
+
+        <div class="yh-motif">
+          <div class="yh-motif__icon">✒</div>
+          <div class="yh-motif__name">붓</div>
+          <div class="yh-motif__val">Creation / 창작</div>
           <p class="yh-motif__body">
             첫 전시는 끝이 아니라 시작점이다.
             Yellow House에서의 경험이
@@ -909,7 +910,7 @@
       </div>
     </div>
     <div class="yh">
-      <img src="메인 이미지/5. yellow house/yellow house (2).jpg"
+      <img src="메인 이미지/5. yellow house/yellow house (2).webp"
            alt="Yellow House — 아이덴티티 시스템" />
     </div>
   </div>
@@ -1017,7 +1018,7 @@
       </div>
     </div>
     <div class="yh">
-      <img src="메인 이미지/5. yellow house/yellow house (3).jpg"
+      <img src="메인 이미지/5. yellow house/yellow house (3).webp"
            alt="Yellow House — 브랜드 어플리케이션" />
     </div>
   </div>
@@ -1106,7 +1107,7 @@
         <span class="yh-imgblk__rule"></span>
       </div>
     </div>
-    <img src="메인 이미지/5. yellow house/yellow house (4).jpg"
+    <img src="메인 이미지/5. yellow house/yellow house (4).webp"
          alt="Yellow House — 목업 컬렉션" />
   </div>
 
@@ -1183,7 +1184,7 @@
         </p>
         <p class="yh-reflection__attr">Yellow House — Brand Concept Statement · 2024</p>
         <p class="yh-reflection__note">
-          이 프로젝트를 통해 확인한 것: 브랜드 아이덴티티는 로고에서 끝나지 않는다.
+          브랜드 아이덴티티는 로고에서 끝나지 않는다.
           신진 예술가에게 필요한 것은 더 좋은 전시 공간이 아니라,
           사람들이 이미 있는 장소에 예술을 심는 구조였다.
           Yellow House는 그 구조 전체를 브랜드로 만든 작업이다.
